@@ -1,0 +1,30 @@
+---
+import Job from "./Job.astro";
+import i18next, { t } from "i18next";
+const i18 = i18next.getDataByLanguage(i18next.language) as any;
+const education = i18["translation"]["home"]["education"]["content"] as {
+  companyName: string;
+  position: string;
+  period: string;
+  activities: string[];
+}[];
+---
+
+<div
+  class="text-xl font-semibold text-secondary-foreground flex flex-row items-center"
+>
+  <svg
+    width="1em"
+    height="1em"
+    viewBox="0 0 100 100"
+    class="text-accent-600 dark:text-accent-200"
+    data-icon="round"
+  >
+    <use xlink:href="#ai:local:round"></use>
+  </svg><h1 class="pl-2 font-bold" aria-label="Education">
+    {t("home.education.title")}
+  </h1>
+</div>
+<div class="flex flex-col gap-y-3">
+  {education.map((edu) => <Job infoJob={edu} />)}
+</div>

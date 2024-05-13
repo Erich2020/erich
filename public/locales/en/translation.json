@@ -1,0 +1,92 @@
+{
+    "site": {
+        "title": "Erich Lz",
+        "description": "software developer, profile"
+    },
+    "home": {
+        "title": "home",
+        "about": {
+            "title": "About me",
+            "paragraph": "I am a Software Development Engineer with over 2 years of industry experience. Passionate about finding creative and efficient solutions to challenges encountered in software development. Committed to technical excellence and continuous improvement, I am constantly seeking opportunities to learn and grow professionally in this dynamic field of technology."
+        },
+        "experience": {
+            "title": "Experience",
+            "content": [
+                {
+                    "companyName": "Global Primex",
+                    "position": "Junior Full Stack Developer",
+                    "period": "24-02-2022 - Present",
+                    "activities": [
+                        "Lead and guide the development team to ensure a software product aligned with business needs.",
+                        "Maintain technical communication with external areas for integration of third-party software.",
+                        "Define frameworks to streamline deliveries in development and meet deadlines.",
+                        "Actively involve participation between management, business, operations, and development for continuous improvement.",
+                        "Plan and align workloads to the team according to their skills for each Sprint.",
+                        "Actively participate in product software development processes.",
+                        "I contributed to the project's success through effective project execution, resulting in the generation of added value that could be successfully replicated in other locations."
+                    ]
+                },
+                {
+                    "companyName": "Local Business Project",
+                    "position": "Full Stack Developer",
+                    "period": "May 2021 to January 2022",
+                    "activities": [
+                        "Development of REST API with DotNet Framework 5",
+                        "Front End development with Angular Js 10+",
+                        "Requirement gathering.",
+                        "Integration with third-party software.",
+                        "Handling MySql, MongoDb databases.",
+                        "Problem-solving",
+                        "Management of Linux/docker server"
+                    ]
+                }
+            ]
+        },
+        "education": {
+            "title": "Education",
+            "content": [
+                {
+                    "companyName": "Open and Distance University of Mexico",
+                    "position": "Software Development Engineer",
+                    "period": "Intern / Incomplete",
+                    "activities": []
+                }
+            ]
+        },
+        "projects": {
+            "title": "Projects"
+        },
+        "skills": {
+            "title": "Skills",
+            "category1": "Infrastructure & Cloud Providers",
+            "category2": "Virtualization & Containers",
+            "category3": "Control de Versiones",
+            "category4": "App Servers",
+            "category5": "Frameworks",
+            "category6": "Database Servers",
+            "category7": "Languages",
+            "category8": "Operating Systems"
+        },
+        "tools": {
+            "title": "Tools",
+            "category1": "Development",
+            "category2": "Design",
+            "category3": "Productivity",
+            "type1": "Database Manager",
+            "type2": "Code Editor",
+            "type3": "Server Manager",
+            "type4": "Package Manager",
+            "type5": "API Platform",
+            "type6": "Design Tool",
+            "type7": "Project Manager",
+            "type8": "Communication and Collaboration Platform"
+        },
+        "profile": {
+            "position": "Full Stack Developer",
+            "locationLabel": "Location",
+            "location": "Remote, Mexico",
+            "btnConcat": "Contact Me!",
+            "objective": "Developing software solutions that enhance and simplify people's activities."
+        }
+    }
+}

@@ -1,0 +1,32 @@
+---
+interface Props {
+  infoJob: {
+    companyName: string;
+    position: string;
+    period: string;
+    activities: string[];
+  };
+}
+const { infoJob } = Astro.props;
+const { companyName, position, period, activities } = infoJob;
+
+---
+
+<div
+  class="flex w-full flex-col gap-x-7 gap-y-1 bg-background-secondary p-5 text-secondary-foreground relative rounded-2xl"
+>
+  <div class="flex flex-col gap-y-1.5">
+    <div class="flex flex-col gap-y-0.5"></div><h1
+      class="text-lg font-medium text-secondary-foreground"
+    >
+      {companyName}
+    </h1>
+    <h2 class="text-muted-foreground">{position}</h2>
+    <h2 class="text-sm text-accent-600 dark:text-accent-200">
+      {period}
+    </h2>
+    <ul class="ml-4 list-disc text-muted-foreground">
+      {activities.map((act) => <li class="text-justify">{act}</li>)}
+    </ul>
+  </div>
+</div>
