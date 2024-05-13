@@ -57,7 +57,7 @@
             "title": "Projects",
             "contents": [
                 {
-                    "link": "erich/pr-01",
+                    "link": "pr-01",
                     "name": "Fresh Eggs",
                     "resume": "Android application that allows you to check the laying date of an egg.",
                     "image": "pr-01",
