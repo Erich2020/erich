@@ -1,18 +1,20 @@
 ---
 import i18next, { t } from "i18next";
+import { Image } from "astro:assets";
+
+import profile from "../assets/person.png";
 ---
 
 <aside
   class="top-5 flex flex-col items-center justify-center pt-16 rounded-2xl md:sticky md:col-span-1 md:h-screen md:pl-5"
 >
-  <img
-    src="/src/assets/person.png"
+  <Image
+    src={profile}
     alt="profile photo"
     class="bg-accent-300 dark:bg-accent-900 z-10 h-56 w-auto shadow-xl rounded-3xl p-1"
     loading="lazy"
     width="3840"
     height="3840"
-    decoding="async"
   />
   <div
     class="bg-white dark:bg-black text-black dark:text-white bg-background-tertiary shadow-xl mt-[-6rem] w-full max-w-[400px] p-5 relative rounded-2xl"

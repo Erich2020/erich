@@ -8,7 +8,7 @@
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "translate":"npx astro-i18next generate"
+    "translate": "npx astro-i18next generate"
   },
   "dependencies": {
     "@astrojs/check": "^0.6.0",
