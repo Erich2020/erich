@@ -188,6 +188,11 @@ let currentColor = "#fff";
     }
   });
   let isSpanish = location.href.split("/").reverse()[0].split("#")[0] == "es";
+  console.log({
+    val: location.href.split("/").reverse()[0].split("#")[0] == "es",
+    select: location.href.split("/").reverse()[0].split("#")[0],
+    principal: location.href.split("/").reverse()[0].split("#"),
+  });
   document.getElementById("toggleLanguaje")?.addEventListener("click", () => {
     isSpanish = !isSpanish;
     if (isSpanish) {

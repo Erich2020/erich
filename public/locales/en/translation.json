@@ -54,7 +54,19 @@
             ]
         },
         "projects": {
-            "title": "Projects"
+            "title": "Projects",
+            "contents": [
+                {
+                    "link": "/pr-01",
+                    "name": "Fresh Eggs",
+                    "resume": "Android application that allows you to check the laying date of an egg.",
+                    "image": "pr-01",
+                    "icons": [
+                        "flutter",
+                        "dart"
+                    ]
+                }
+            ]
         },
         "skills": {
             "title": "Skills",

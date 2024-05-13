@@ -71,8 +71,14 @@
             "title": "Proyectos",
             "contents": [
                 {
-                    "title": "",
-                    "description": ""
+                    "link": "/pr-01",
+                    "name": "Huevos Frescos",
+                    "resume": "Apicacion para andoid que te permite consultar la fecha de puesta de un huevo.",
+                    "image": "pr-01",
+                    "icons": [
+                        "flutter",
+                        "dart"
+                    ]
                 }
             ]
         },
