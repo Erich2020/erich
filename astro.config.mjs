@@ -5,5 +5,6 @@ import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
+  site:"https://erich2020.github.io/",
   integrations: [tailwind(), astroI18next()],
 });
