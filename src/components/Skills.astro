@@ -1,110 +1,85 @@
 ---
 import { Image } from "astro:assets";
 import i18next, { t } from "i18next";
+import Tecnology from "./Tecnology.astro";
 
-import cloudformationIcon from "../assets/icons/cloudformation.svg";
-import awsIcon from "../assets/icons/aws.svg";
-import dockerIcon from "../assets/icons/docker.svg";
-import gitlabIcon from "../assets/icons/gitlab.svg";
-import githubIcon from "../assets/icons/github.svg";
-import nginxIcon from "../assets/icons/nginx.svg";
-import restIcon from "../assets/icons/rest.svg";
-import graphqlIcon from "../assets/icons/graphql.svg";
-import apolloIcon from "../assets/icons/apollographql.svg";
-import nodejsIcon from "../assets/icons/nodejs.svg";
-import expressIcon from "../assets/icons/express.svg";
-import reactIcon from "../assets/icons/react.svg";
-import angularIcon from "../assets/icons/angular.svg";
-import astroIcon from "../assets/icons/astro.svg";
-import nativescriptIcon from "../assets/icons/nativescript.svg";
-import nestjsIcon from "../assets/icons/nestjs.svg";
-import materialIcon from "../assets/icons/material.svg";
-import tailwindIcon from "../assets/icons/tailwind.svg";
-import dotnetIcon from "../assets/icons/dotnet.svg";
-import mysqlIcon from "../assets/icons/mysql.svg";
-import postgresqlIcon from "../assets/icons/postgresql.svg";
-import mongodbIcon from "../assets/icons/mongodb.svg";
-import redisIcon from "../assets/icons/redis.svg";
-import typescriptIcon from "../assets/icons/typescript.svg";
-import csharpIcon from "../assets/icons/csharp.svg";
-import javascriptIcon from "../assets/icons/js.svg";
-import phpIcon from "../assets/icons/php.svg";
-import pythonIcon from "../assets/icons/python.svg";
-import yamlIcon from "../assets/icons/yaml.svg";
-import sqlIcon from "../assets/icons/sql.svg";
-import linuxIcon from "../assets/icons/linux.svg";
-import windowsIcon from "../assets/icons/windows.svg";
 const i18n = i18next.getDataByLanguage(i18next.language) as any;
 const i18 = i18n["translation"]["home"]["skills"];
 const skills = [
-  {
-    category: i18.category1,
-    skillNames: [
-      { name: "Cloudformation", icon: cloudformationIcon },
-      { name: "AWS", icon: awsIcon },
-    ],
-  },
+  // {
+  //   category: i18.category1,
+  //   skillNames: [
+  //     { name: "Cloudformation", icon: "cloudformationIcon" },
+  //     { name: "AWS", icon: "awsIcon" },
+  //   ],
+  // },
   {
     category: i18.category2,
-    skillNames: [{ name: "Docker", icon: dockerIcon }],
+    skillNames: [
+      { name: "Docker", icon: "dockerIcon" },
+      { name: "Docker Compose", icon: "dockerComposeIcon" },
+    ],
   },
   {
     category: i18.category3,
     skillNames: [
-      { name: "Gitlab", icon: gitlabIcon },
-      { name: "Github", icon: githubIcon },
+      { name: "Gitlab", icon: "gitlabIcon" },
+      { name: "Github", icon: "githubIcon" },
     ],
   },
   {
     category: i18.category4,
     skillNames: [
-      { name: "Nginx", icon: nginxIcon },
-      { name: "REST", icon: restIcon },
-      { name: "Graphql", icon: graphqlIcon },
-      { name: "Apollo", icon: apolloIcon },
-      { name: "Express", icon: expressIcon },
+      { name: "Nginx", icon: "nginxIcon" },
+      { name: "REST", icon: "restIcon" },
+      { name: "Graphql", icon: "graphqlIcon" },
+      { name: "Apollo", icon: "apolloIcon" },
+      { name: "Express", icon: "expressIcon" },
     ],
   },
   {
     category: i18.category5,
     skillNames: [
-      { name: "React", icon: reactIcon },
-      { name: "Angular", icon: angularIcon },
-      { name: "Astro", icon: astroIcon },
-      { name: "Nativescript", icon: nativescriptIcon },
-      { name: "NestJs", icon: nestjsIcon },
-      { name: "Material-UI", icon: materialIcon },
-      { name: "Tailwind", icon: tailwindIcon },
-      { name: "DotNet 5", icon: dotnetIcon },
-      { name: "Node JS", icon: nodejsIcon },
+      { name: "React", icon: "reactIcon" },
+      { name: "Angular", icon: "angularIcon" },
+      { name: "Astro", icon: "astroIcon" },
+      { name: "Nativescript", icon: "nativescriptIcon" },
+      { name: "NestJs", icon: "nestjsIcon" },
+      { name: "Material-UI", icon: "materialIcon" },
+      { name: "Tailwind", icon: "tailwindIcon" },
+      { name: "DotNet 5", icon: "dotnetIcon" },
+      { name: "Node JS", icon: "nodejsIcon" },
+      { name: "Flutter", icon: "flutterIcon" },
     ],
   },
   {
     category: i18.category6,
     skillNames: [
-      { name: "MySQL", icon: mysqlIcon },
-      { name: "PostgreSQL", icon: postgresqlIcon },
-      { name: "MongoDB", icon: mongodbIcon },
-      { name: "Redis", icon: redisIcon },
+      { name: "MySQL", icon: "mysqlIcon" },
+      { name: "PostgreSQL", icon: "postgresqlIcon" },
+      { name: "MongoDB", icon: "mongodbIcon" },
+      { name: "Redis", icon: "redisIcon" },
+      { name: "Firebird", icon: "firebirdIcon" },
     ],
   },
   {
     category: i18.category7,
     skillNames: [
-      { name: "Typescript", icon: typescriptIcon },
-      { name: "C#", icon: csharpIcon },
-      { name: "Javascript", icon: javascriptIcon },
-      { name: "PHP", icon: phpIcon },
+      { name: "Typescript", icon: "typescriptIcon" },
+      { name: "CSharp", icon: "csharpIcon" },
+      { name: "Javascript", icon: "javascriptIcon" },
+      { name: "PHP", icon: "phpIcon" },
       //   { name: "Python", icon: pythonIcon },
-      { name: "Yaml", icon: yamlIcon },
-      { name: "SQL", icon: sqlIcon },
+      { name: "Yaml", icon: "yamlIcon" },
+      { name: "SQL", icon: "sqlIcon" },
+      { name: "Dart", icon: "dartIcon" },
     ],
   },
   {
     category: i18.category8,
     skillNames: [
-      { name: "Linux", icon: linuxIcon },
-      { name: "Windows", icon: windowsIcon },
+      { name: "Linux", icon: "linuxIcon" },
+      { name: "Windows", icon: "windowsIcon" },
     ],
   },
 ];
@@ -133,14 +108,8 @@ const skills = [
           {sk.category}
         </h2>
         <div class="flex w-3/5 flex-row flex-wrap gap-x-4 gap-y-2">
-          {sk.skillNames.map((nm) => (
-            <button
-              class="inline-flex items-center gap-x-1 bg-accent-600 text-white dark:bg-accent-400 dark:text-black text-secondary-foreground border border-border px-2 py-1 text-sm transition-all hover:bg-input cursor-default rounded-xl"
-              data-astro-prefetch=""
-            >
-              <Image src={nm.icon} alt={nm.name} width={20} />
-              <p>{nm.name}</p>
-            </button>
+          {sk.skillNames.map(({ name, icon }) => (
+            <Tecnology name={name} icon={icon} />
           ))}
         </div>
       </div>

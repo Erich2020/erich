@@ -2,6 +2,7 @@
 import { Image } from "astro:assets";
 import i18next, { t } from "i18next";
 import portraitImg from "../assets/projects/huevos-frescos/sc.png";
+import Tecnology from "./Tecnology.astro";
 
 const i18 = i18next.getDataByLanguage(i18next.language) as any;
 
@@ -19,49 +20,103 @@ const projects = i18["translation"]["home"]["projects"]["contents"] as {
   name: string;
   resume: string;
   image: string;
-  icons?: string[];
+  tecnologies?: { name: string; icon: string }[];
 }[];
-
 ---
 
-<div
-  class="text-xl font-semibold text-secondary-foreground flex flex-row items-center"
->
-  <svg
-    width="1em"
-    height="1em"
-    viewBox="0 0 100 100"
-    class="text-accent-600 dark:text-accent-200"
-    data-icon="round"
-  >
-    <use xlink:href="#ai:local:round"></use>
-  </svg><h1 class="pl-2 font-bold" aria-label="Projects">
-    {t("home.projects.title")}
-  </h1>
-</div>
-<div class="flex flex-col gap-y-3">
-  <div class="flex flex-col gap-y-3 sm:flex-row sm:gap-x-3 sm:gap-y-0">
-    {
-      projects.map(({ image, link, name, resume, icons }) => (
-        <a
-          class="w-full sm:w-1/2 flex flex-col gap-y-3 rounded-2xl border border-border bg-primary-foreground transition-all hover:border-foreground/25 hover:shadow-sm"
-          href={link}
-        >
-          <Image
-            src={projectImages[image]}
-            alt={name}
-            width="1023"
-            height="1023"
-            class="h-48 w-full rounded-2xl rounded-bl-none rounded-br-none object-cover"
-          />
-          <div class="flex flex-col gap-y-0.5 px-5 py-4">
-            <h1 class="text-lg font-medium text-secondary-foreground">
-              {name}
-            </h1>
-            <h2 class="text-muted-foreground">{resume}</h2>
-          </div>
-        </a>
-      ))
-    }
+<div class="max-w-xl mx-auto" style="width: -webkit-fill-available;">
+  <div class="relative">
+    <!-- Botón de navegación izquierdo -->
+    <button
+      class="h-10 absolute dark:bg-accent-300 bottom-0 left-1 z-10 flex items-center justify-center w-12 text-white bg-black bg-opacity-50 rounded-full hover:bg-opacity-75"
+      id="prevSlide"
+    >
+      <svg
+        class="w-6 h-6"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+        ><path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M15 19l-7-7 7-7"></path></svg
+      >
+    </button>
+    <!-- Contenedor de las imágenes -->
+    <div class="overflow-hidden rounded-lg">
+      <!-- Lista de imágenes -->
+      <div
+        id="carousel"
+        class="flex w-max h-max p-3 transition-transform duration-200 ease-in-out"
+      >
+        <!-- Imágenes del carrusel -->
+        {
+          projects?.map(({ image, link, name, resume, tecnologies }) => (
+            <a
+              class=" max-w-72 flex flex-col px-2 rounded-2xl border-border bg-primary-foreground transition-all dark:hover:shadow-md dark:hover:shadow-accent-200 hover:shadow-xl"
+              href={link}
+            >
+              <Image
+                src={projectImages[image]}
+                alt={name}
+                width="1023"
+                height="1023"
+                class="h-48 rounded-2xl rounded-bl-none rounded-br-none object-cover"
+              />
+              <div class=" flex flex-col gap-y-0.5 px-5 py-4">
+                <h1 class=" text-2xl text-secondary-foreground text-center font-bold">
+                  {name}
+                </h1>
+                <div class="flex flex-row flex-wrap gap-x-4 gap-y justify-center">
+                  {tecnologies?.map(({ icon, name }) => (
+                    <Tecnology icon={icon} name={name} />
+                  ))}
+                </div>
+                <h2 class="text-muted-foreground text-justify">{resume}</h2>
+              </div>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+    <!-- Botón de navegación derecho -->
+    <button
+      id="nextSlide"
+      class="h-10 absolute dark:bg-accent-300 bottom-0 right-1 z-10 flex items-center justify-center w-12 text-white bg-black bg-opacity-50 rounded-full hover:bg-opacity-75"
+    >
+      <svg
+        class="w-6 h-6"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+        ><path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M9 5l7 7-7 7"></path></svg
+      >
+    </button>
   </div>
 </div>
+
+<script>
+  let slideIndex = 0;
+
+  function showSlide(n: number) {
+    const slides = document.querySelectorAll("#carousel a");
+    slideIndex = (n + slides.length) % slides?.length;
+    slides.forEach((slide: any, index) => {
+      slide.style.transform = `translateX(-${slideIndex * 100}%)`;
+    });
+  }
+
+  document.getElementById("nextSlide")?.addEventListener("click", () => {
+    showSlide(slideIndex + 1);
+  });
+  document.getElementById("prevSlide")?.addEventListener("click", () => {
+    showSlide(slideIndex - 1);
+  });
+</script>

@@ -1,6 +1,7 @@
 ---
 import Job from "./Job.astro";
 import i18next, { t } from "i18next";
+
 const i18 = i18next.getDataByLanguage(i18next.language) as any;
 
 const jobs = i18["translation"]["home"]["experience"]["content"] as {
@@ -9,7 +10,6 @@ const jobs = i18["translation"]["home"]["experience"]["content"] as {
   period: string;
   activities: string[];
 }[];
-
 ---
 
 <div

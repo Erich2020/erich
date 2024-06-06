@@ -1,0 +1,93 @@
+---
+import { Image } from "astro:assets";
+
+import cloudformationIcon from "../assets/icons/cloudformation.svg";
+import awsIcon from "../assets/icons/aws.svg";
+import dockerIcon from "../assets/icons/docker.svg";
+import gitlabIcon from "../assets/icons/gitlab.svg";
+import githubIcon from "../assets/icons/github.svg";
+import nginxIcon from "../assets/icons/nginx.svg";
+import restIcon from "../assets/icons/rest.svg";
+import graphqlIcon from "../assets/icons/graphql.svg";
+import apolloIcon from "../assets/icons/apollographql.svg";
+import nodejsIcon from "../assets/icons/nodejs.svg";
+import expressIcon from "../assets/icons/express.svg";
+import reactIcon from "../assets/icons/react.svg";
+import angularIcon from "../assets/icons/angular.svg";
+import astroIcon from "../assets/icons/astro.svg";
+import nativescriptIcon from "../assets/icons/nativescript.svg";
+import nestjsIcon from "../assets/icons/nestjs.svg";
+import materialIcon from "../assets/icons/material.svg";
+import tailwindIcon from "../assets/icons/tailwind.svg";
+import dotnetIcon from "../assets/icons/dotnet.svg";
+import mysqlIcon from "../assets/icons/mysql.svg";
+import postgresqlIcon from "../assets/icons/postgresql.svg";
+import mongodbIcon from "../assets/icons/mongodb.svg";
+import redisIcon from "../assets/icons/redis.svg";
+import typescriptIcon from "../assets/icons/typescript.svg";
+import csharpIcon from "../assets/icons/csharp.svg";
+import javascriptIcon from "../assets/icons/js.svg";
+import phpIcon from "../assets/icons/php.svg";
+import pythonIcon from "../assets/icons/python.svg";
+import yamlIcon from "../assets/icons/yaml.svg";
+import sqlIcon from "../assets/icons/sql.svg";
+import linuxIcon from "../assets/icons/linux.svg";
+import windowsIcon from "../assets/icons/windows.svg";
+import flutterIcon from "../assets/icons/flutter.svg";
+import dartIcon from "../assets/icons/dart.svg";
+import dockerComposeIcon from "../assets/icons/dockerCompose.png";
+import firebirdIcon from "../assets/icons/firebird.svg";
+const icons: any = {
+  cloudformationIcon,
+  awsIcon,
+  dockerIcon,
+  gitlabIcon,
+  githubIcon,
+  nginxIcon,
+  restIcon,
+  graphqlIcon,
+  apolloIcon,
+  nodejsIcon,
+  expressIcon,
+  reactIcon,
+  angularIcon,
+  astroIcon,
+  nativescriptIcon,
+  nestjsIcon,
+  materialIcon,
+  tailwindIcon,
+  dotnetIcon,
+  mysqlIcon,
+  postgresqlIcon,
+  mongodbIcon,
+  redisIcon,
+  typescriptIcon,
+  csharpIcon,
+  javascriptIcon,
+  phpIcon,
+  pythonIcon,
+  yamlIcon,
+  sqlIcon,
+  linuxIcon,
+  windowsIcon,
+  flutterIcon,
+  dartIcon,
+  dockerComposeIcon,
+  firebirdIcon,
+};
+
+interface Props {
+  name: string;
+  icon: any;
+}
+
+const { name, icon } = Astro.props;
+---
+
+<button
+  class="inline-flex items-center gap-x-1 bg-accent-600 text-white dark:bg-accent-400 dark:text-black text-secondary-foreground border border-border px-2 py-1 text-sm transition-all hover:bg-input cursor-default rounded-xl"
+  data-astro-prefetch=""
+>
+  <Image src={icons[icon]} alt={name} width={20} />
+  <p>{name}</p>
+</button>

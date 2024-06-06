@@ -23,7 +23,7 @@
                         "Incluir activamente la participación entre la linea directiva, negocio, operaciones y desarrollo para la mejora continúa.",
                         "Planificar y alinear las cargas de trabajo al equipo de trabajo acorde a sus habilidades, para cada Sprint.",
                         "Participar activamente en los procesos de desarrollo del producto software.",
-                        "Contribuí al éxito del proyecto mediante la ejecución efectiva de proyectos, lo que resultó en la generación de valor agregado que se pudo replicar con éxito en otras localidades."
+                        "Contribuí al éxito del proyecto mediante la ejecución efectiva de proyectos, lo que resultó en replicar con éxito en otras localidades."
                     ]
                 },
                 {
@@ -73,11 +73,97 @@
                 {
                     "link": "pr-01",
                     "name": "Huevos Frescos",
-                    "resume": "Apicacion para andoid que te permite consultar la fecha de puesta de un huevo.",
+                    "resume": "Aplicación para Android que te permite consultar la fecha de puesta de un huevo.",
                     "image": "pr-01",
-                    "icons": [
-                        "flutter",
-                        "dart"
+                    "tecnologies": [
+                        {
+                            "name": "flutter",
+                            "icon": "flutterIcon"
+                        },
+                        {
+                            "name": "Dart",
+                            "icon": "dartIcon"
+                        }
+                    ]
+                },
+                {
+                    "link": "pr-02",
+                    "name": "MiscAbar - Desktop",
+                    "resume": "Apicacion para escritorio de gestión y venta de productos.",
+                    "image": "pr-01",
+                    "tecnologies": [
+                        {
+                            "name": "DotNet 5",
+                            "icon": "dotnetIcon"
+                        },
+                        {
+                            "name": "Firebird",
+                            "icon": "firebirdIcon"
+                        }
+                    ]
+                },
+                {
+                    "link": "pr-02",
+                    "name": "MiscAbar - Web",
+                    "resume": "Apicacion para web para la gestión y venta de productos.",
+                    "image": "pr-01",
+                    "tecnologies": [
+                        {
+                            "name": "Angular",
+                            "icon": "angularIcon"
+                        },
+                        {
+                            "name": "DotNet 5",
+                            "icon": "dotnetIcon"
+                        },
+                        {
+                            "name": "MySql",
+                            "icon": "mysqlIcon"
+                        }
+                    ]
+                },
+                {
+                    "link": "pr-03",
+                    "name": "Generico",
+                    "resume": "Apicacion básica de gestión y ventas.",
+                    "image": "pr-01",
+                    "tecnologies": [
+                        {
+                            "name": "Angular",
+                            "icon": "angularIcon"
+                        },
+                        {
+                            "name": "DotNet 5",
+                            "icon": "dotnetIcon"
+                        },
+                        {
+                            "name": "MySql",
+                            "icon": "mysqlIcon"
+                        }
+                    ]
+                },
+                {
+                    "link": "pr-04",
+                    "name": "Plataforma Simuladores",
+                    "resume": "WPA orientada al giro de seguros, para simular cotizaciones de productos.",
+                    "image": "pr-01",
+                    "tecnologies": [
+                        {
+                            "name": "Angular",
+                            "icon": "angularIcon"
+                        },
+                        {
+                            "name": "Apollo",
+                            "icon": "apolloIcon"
+                        },
+                        {
+                            "name": "Graphql",
+                            "icon": "graphqlIcon"
+                        },
+                        {
+                            "name": "REST",
+                            "icon": "restIcon"
+                        }
                     ]
                 }
             ]
@@ -113,6 +199,13 @@
             "location": "Remoto, Mexico",
             "btnConcat": "¡Contáctame!",
             "objective": "Desarrollar soluciones de software que mejoren y simplifiquen las actividades de las personas."
+        }
+    },
+    "pr_01": {
+        "images_description": {
+            "main": "Pantalla principal de la app",
+            "product": "Pantalla de la marca a consultar de la app",
+            "response": "Pantalla con la respuesta de la consulta de la app"
         }
     }
 }

@@ -1,20 +1,226 @@
 ---
-import { changeLanguage } from "i18next";
+import { Image } from "astro:assets";
 import Layout from "../../layouts/Project.astro";
+import Tecnology from "../../components/Tecnology.astro";
+import mainImage from "../../assets/projects/huevos-frescos/main.png";
+import productImage from "../../assets/projects/huevos-frescos/product.png";
+import responseImage from "../../assets/projects/huevos-frescos/response.png";
+import i18next, { t, changeLanguage } from "i18next";
 
 changeLanguage("en");
+
+const i18 = i18next.getDataByLanguage(i18next.language) as any;
+const skillNames = [
+  { name: "REST", icon: "restIcon" },
+  { name: "Dart", icon: "dartIcon" },
+  { name: "Flutter", icon: "flutterIcon" },
+];
+const projectImages = [
+  {
+    name: "main screen",
+    image: mainImage,
+    description: i18["translation"]["pr_01"]["images_description"][
+      "main"
+    ] as string,
+  },
+  {
+    name: "product screen",
+    image: productImage,
+    description: i18["translation"]["pr_01"]["images_description"][
+      "product"
+    ] as string,
+  },
+  {
+    name: "response screen",
+    image: responseImage,
+    description: i18["translation"]["pr_01"]["images_description"][
+      "product"
+    ] as string,
+  },
+];
 ---
 
 <Layout title="Huevos Frescos">
-  <div class="grid grid-cols-1 gap-5 md:grid-cols-3">
+  <div class="grid w-full">
     <div class="md:col-span-2 md:mr-5">
       <div
-        class="bg-white dark:bg-black text-black dark:text-white mt-5 rounded-2xl border border-transparent p-5 md:mt-[5.5rem]"
+        class="bg-white dark:bg-black text-black dark:text-white mt-5 rounded-2xl border border-transparent p-5 md:mt-[5.5rem] text-center"
       >
-        <section id="" class="anchor flex flex-col gap-y-5 py-5"></section>
+        <h1 class="font-bold text-3xl my-3">
+          Aplicación para Android: Consulta de Fecha de Puesta de un Huevo
+        </h1>
+        <section
+          class="w-full flex flex-row max-sm:flex-col gap-y-5 p-5 gap-x-2"
+        >
+          <aside class="w-6/12 max-sm:w-4/5 flex flex-col gap-y-5 m-5">
+            <h2 class="font-bold text-xl">
+              Descripción del Proyecto: Huevos Frescos
+            </h2>
+            <p class="text-justify">
+              Esta aplicación para Android permite a los usuarios consultar la
+              fecha de puesta de un huevo de manera rápida y sencilla. Con una
+              interfaz intuitiva y fácil de usar, los usuarios pueden acceder a
+              la información precisa sobre la frescura del huevo con solo unos
+              pocos toques en la pantalla.
+            </p>
+            <h3 class="font-bold text-xl">Tecnologías</h3>
+            <div class="flex w-full flex-row flex-wrap gap-x-4 justify-center">
+              {
+                skillNames.map(({ name, icon }) => (
+                  <Tecnology name={name} icon={icon} />
+                ))
+              }
+            </div>
+            <h2 class="font-bold text-xl">Características Principales</h2>
+            <p class="text-justify">
+              Consulta Rápida de Fechas: Permite a los usuarios obtener la fecha
+              exacta de puesta de un huevo ingresando un código específico.
+              Interfaz Amigable: Desarrollada con Flutter, la aplicación ofrece
+              una experiencia de usuario fluida y atractiva. Integración con
+              Servicios Web: Utiliza servicios web REST para obtener la
+              información necesaria, garantizando datos actualizados y precisos.
+              Compatibilidad Amplia: Optimizada para funcionar en una amplia
+              gama de dispositivos Android.
+            </p>
+            <h2 class="font-bold text-xl">Beneficios para el Usuario</h2>
+            <p class="text-justify">
+              Información Precisa: Asegura que los usuarios consuman huevos
+              frescos al proporcionar la fecha exacta de puesta. Comodidad y
+              Facilidad de Uso: La aplicación está diseñada para ser intuitiva,
+              facilitando el acceso a la información sin complicaciones.
+              Seguridad y Confianza: Al usar servicios web REST, la aplicación
+              garantiza que los datos proporcionados son fiables y actualizados.
+            </p>
+          </aside>
+          <article class="w-6/12 max-sm:w-full flex flex-col">
+            <Image
+              src={projectImages[0].image}
+              alt={projectImages[0].name}
+              class="rounded-2xl object-cover self-center w-3/5"
+            />
+            <div class="flex flex-col gap-y-0.5 px-5 py-4">
+              <h2 class="text-muted-foreground text-center">
+                {projectImages[0].description}
+              </h2>
+            </div>
+          </article>
+        </section>
+        <section
+          class="w-full flex flex-row max-sm:flex-col-reverse gap-y-5 p-5 gap-x-2"
+        >
+          <aside class="w-6/12 max-sm:w-full flex flex-col">
+            <Image
+              src={projectImages[1].image}
+              alt={projectImages[1].name}
+              class="rounded-2xl object-cover self-center w-3/6"
+            />
+            <div class="flex flex-col gap-y-0.5 px-5 py-4">
+              <h2 class="text-muted-foreground text-center">
+                {projectImages[1].description}
+              </h2>
+            </div>
+          </aside>
+          <article class="w-6/12 max-sm:w-4/5 flex flex-col gap-y-5 m-5">
+            <h2 class="font-bold text-xl">Logros</h2>
+
+            <span class="text-justify">
+              <b>Desarrollo Completo de la Aplicación</b>: Creación de una
+              aplicación funcional con cuatro pantallas que permite a los
+              usuarios conocer la frescura de los huevos de manera fácil.
+            </span>
+            <span class="text-justify">
+              <b>Integración Efectiva con Servicios Web</b>: Consumo exitoso de
+              servicios web REST para obtener y mostrar información relevante.
+            </span>
+            <span class="text-justify">
+              <b>Interfaz de Usuario Intuitiva</b>: Diseño y desarrollo de una
+              interfaz de usuario atractiva y fácil de usar.
+            </span>
+
+            <span class="text-justify">
+              <b>Experiencia en Flutter</b>: Profundización en el uso de Flutter
+              y Dart, lo que permitió un desarrollo rápido y eficiente.
+            </span>
+
+            <span class="text-justify">
+              <b>Gestión de Proyecto Independiente</b>: Realización del proyecto
+              completo como desarrollador único, demostrando habilidades de
+              gestión del tiempo y autoaprendizaje.
+            </span>
+          </article>
+        </section>
+        <section
+          class="w-full flex flex-row max-sm:flex-col gap-y-5 p-5 gap-x-2"
+        >
+          <aside class="w-6/12 max-sm:w-4/5 flex flex-col gap-y-5 m-5">
+            <h2 class="font-bold text-xl">Aprendizajes</h2>
+            <span class="text-justify">
+              <b>Dominio de Flutter y Dart</b>: Aprendizaje profundo de Flutter
+              como framework de desarrollo móvil y Dart como lenguaje de
+              programación.
+            </span>
+            <span class="text-justify">
+              <b>Integración de API REST</b>: Habilidades mejoradas en la
+              integración y consumo de APIs RESTful.
+            </span>
+
+            <span class="text-justify">
+              <b>Diseño de UI/UX</b>: Experiencia en diseño de interfaces de
+              usuario que son tanto atractivas como funcionales.
+            </span>
+
+            <span class="text-justify">
+              <b>Manejo de Errores</b>: Desarrollo de técnicas para manejar
+              errores y excepciones de manera efectiva, mejorando la robustez de
+              la aplicación.
+            </span>
+
+            <span class="text-justify">
+              <b>Gestión del Ciclo de Vida del Proyecto</b>: Aprendizaje de la
+              gestión completa del ciclo de vida del desarrollo de una
+              aplicación.
+            </span>
+            <p class="my-3 p-5">
+              <button
+                id="button"
+                class="bg-accent-400 text-white font-bold rounded-2xl px-3 py-1"
+                >Prueba la App</button
+              >
+            </p>
+          </aside>
+          <article class="w-6/12 max-sm:w-full flex flex-col">
+            <Image
+              src={projectImages[2].image}
+              alt={projectImages[2].name}
+              class="rounded-2xl object-cover self-center w-3/6"
+            />
+            <div class="flex flex-col gap-y-0.5 px-5 py-4">
+              <h2 class="text-muted-foreground text-center">
+                {projectImages[2].description}
+              </h2>
+            </div>
+          </article>
+        </section>
       </div>
     </div>
   </div>
 </Layout>
 
-<style></style>
+<style>
+  button:hover {
+    cursor: pointer;
+  }
+</style>
+
+<script>
+  function handleClick(event: any) {
+    console.log("¡botón pulsado!");
+    event.preventDefault();
+    var link = document.createElement("a");
+    link.href = "/public/HuevosFrescos.apk";
+    link.download = "tryme.apk";
+    document.body.appendChild(link);
+    link.click();
+  }
+  document.getElementById("button")?.addEventListener("click", handleClick);
+</script>
