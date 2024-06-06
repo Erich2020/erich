@@ -35,203 +35,186 @@ const projectImages = [
 ---
 
 <Layout title="Huevos Frescos">
-  <div class="grid">
+  <div class="grid w-full">
     <div class="md:col-span-2 md:mr-5">
       <div
         class="bg-white dark:bg-black text-black dark:text-white mt-5 rounded-2xl border border-transparent p-5 md:mt-[5.5rem] text-center"
       >
-        <section id="" class="anchor flex flex-col gap-y-5 py-5 px-3">
-          <h1 class="font-bold text-3xl">
-            Aplicación para Android: Consulta de Fecha de Puesta de un Huevo
-          </h1>
-          <h2>Descripción del Proyecto: Huevos Frescos</h2>
-          <p class="text-justify">
-            Esta aplicación para Android permite a los usuarios consultar la
-            fecha de puesta de un huevo de manera rápida y sencilla. Con una
-            interfaz intuitiva y fácil de usar, los usuarios pueden acceder a la
-            información precisa sobre la frescura del huevo con solo unos pocos
-            toques en la pantalla.
-          </p>
-          <span class="text-justify">Tecnologías</span>
-          <div class="flex w-4/5 flex-row flex-wrap gap-x-4 gap-y-2">
-            {
-              skillNames.map(({ name, icon }) => (
-                <Tecnology name={name} icon={icon} />
-              ))
-            }
-          </div>
-        </section>
-        <section id="" class="anchor flex flex-col gap-y-5 py-5">
-          <h2 class="font-bold text-xl">Características Principales</h2>
-          <p class="text-justify">
-            Consulta Rápida de Fechas: Permite a los usuarios obtener la fecha
-            exacta de puesta de un huevo ingresando un código específico.
-            Interfaz Amigable: Desarrollada con Flutter, la aplicación ofrece
-            una experiencia de usuario fluida y atractiva. Integración con
-            Servicios Web: Utiliza servicios web REST para obtener la
-            información necesaria, garantizando datos actualizados y precisos.
-            Compatibilidad Amplia: Optimizada para funcionar en una amplia gama
-            de dispositivos Android.
-          </p>
-        </section>
-        <section id="" class="anchor flex flex-col gap-y-5 py-5">
-          <h2 class="font-bold text-xl">Proceso de desarrollo</h2>
-          <p class="text-justify">contenido</p>
-          <p class="text-justify">
-            Si es relevante, puedes compartir información sobre el proceso de
-            desarrollo del proyecto, como los pasos que seguiste, las decisiones
-            clave que tomaste y cualquier iteración o ajuste que realizaste a lo
-            largo del camino
-          </p>
-          <h3>Beneficios para el Usuario</h3>
-          <p>
-            Información Precisa: Asegura que los usuarios consuman huevos
-            frescos al proporcionar la fecha exacta de puesta. Comodidad y
-            Facilidad de Uso: La aplicación está diseñada para ser intuitiva,
-            facilitando el acceso a la información sin complicaciones. Seguridad
-            y Confianza: Al usar servicios web REST, la aplicación garantiza que
-            los datos proporcionados son fiables y actualizados.
-          </p>
-        </section>
-        <section id="" class="anchor flex flex-col gap-y-5 py-5">
-          <h2 class="font-bold text-xl">Roles y responsabilidades</h2>
-
-          <div class="max-w-xl mx-auto" style="width: -webkit-fill-available;">
-            <div class="relative">
-              <!-- Botón de navegación izquierdo -->
-              <button
-                class="h-10 absolute dark:bg-accent-300 bottom-0 left-1 z-10 flex items-center justify-center w-12 text-white bg-black bg-opacity-50 rounded-full hover:bg-opacity-75"
-                id="prevSlide"
-              >
-                <svg
-                  class="w-6 h-6"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                  ><path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M15 19l-7-7 7-7"></path></svg
-                >
-              </button>
-              <!-- Contenedor de las imágenes -->
-              <div class="overflow-hidden rounded-lg">
-                <!-- Lista de imágenes -->
-                <div
-                  id="carousel"
-                  class="flex w-max h-max p-3 transition-transform duration-200 ease-in-out"
-                >
-                  <!-- Imágenes del carrusel -->
-                  {
-                    projectImages?.map(({ image, name, description }) => (
-                      <div class=" max-w-72 flex flex-col px-2 rounded-2xl border-border bg-primary-foreground transition-all dark:hover:shadow-md dark:hover:shadow-accent-200 hover:shadow-xl">
-                        <Image
-                          src={image}
-                          alt={name}
-                          width="1023"
-                          height="1023"
-                          class=" rounded-2xl rounded-bl-none rounded-br-none object-cover"
-                        />
-                        <div class=" flex flex-col gap-y-0.5 px-5 py-4">
-                          <h1 class=" text-2xl text-secondary-foreground text-center font-bold">
-                            {name}
-                          </h1>
-                          <h2 class="text-muted-foreground text-justify">
-                            {description}
-                          </h2>
-                        </div>
-                      </div>
-                    ))
-                  }
-                </div>
-              </div>
-              <!-- Botón de navegación derecho -->
-              <button
-                id="nextSlide"
-                class="h-10 absolute dark:bg-accent-300 bottom-0 right-1 z-10 flex items-center justify-center w-12 text-white bg-black bg-opacity-50 rounded-full hover:bg-opacity-75"
-              >
-                <svg
-                  class="w-6 h-6"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                  ><path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M9 5l7 7-7 7"></path></svg
-                >
-              </button>
+        <h1 class="font-bold text-3xl my-3">
+          Aplicación para Android: Consulta de Fecha de Puesta de un Huevo
+        </h1>
+        <section
+          class="w-full flex flex-row max-sm:flex-col gap-y-5 p-5 gap-x-2"
+        >
+          <aside class="w-6/12 max-sm:w-4/5 flex flex-col gap-y-5 m-5">
+            <h2 class="font-bold text-xl">
+              Descripción del Proyecto: Huevos Frescos
+            </h2>
+            <p class="text-justify">
+              Esta aplicación para Android permite a los usuarios consultar la
+              fecha de puesta de un huevo de manera rápida y sencilla. Con una
+              interfaz intuitiva y fácil de usar, los usuarios pueden acceder a
+              la información precisa sobre la frescura del huevo con solo unos
+              pocos toques en la pantalla.
+            </p>
+            <h3 class="font-bold text-xl">Tecnologías</h3>
+            <div class="flex w-full flex-row flex-wrap gap-x-4 justify-center">
+              {
+                skillNames.map(({ name, icon }) => (
+                  <Tecnology name={name} icon={icon} />
+                ))
+              }
             </div>
-          </div>
+            <h2 class="font-bold text-xl">Características Principales</h2>
+            <p class="text-justify">
+              Consulta Rápida de Fechas: Permite a los usuarios obtener la fecha
+              exacta de puesta de un huevo ingresando un código específico.
+              Interfaz Amigable: Desarrollada con Flutter, la aplicación ofrece
+              una experiencia de usuario fluida y atractiva. Integración con
+              Servicios Web: Utiliza servicios web REST para obtener la
+              información necesaria, garantizando datos actualizados y precisos.
+              Compatibilidad Amplia: Optimizada para funcionar en una amplia
+              gama de dispositivos Android.
+            </p>
+            <h2 class="font-bold text-xl">Beneficios para el Usuario</h2>
+            <p class="text-justify">
+              Información Precisa: Asegura que los usuarios consuman huevos
+              frescos al proporcionar la fecha exacta de puesta. Comodidad y
+              Facilidad de Uso: La aplicación está diseñada para ser intuitiva,
+              facilitando el acceso a la información sin complicaciones.
+              Seguridad y Confianza: Al usar servicios web REST, la aplicación
+              garantiza que los datos proporcionados son fiables y actualizados.
+            </p>
+          </aside>
+          <article class="w-6/12 max-sm:w-full flex flex-col">
+            <Image
+              src={projectImages[0].image}
+              alt={projectImages[0].name}
+              class="rounded-2xl object-cover self-center w-3/5"
+            />
+            <div class="flex flex-col gap-y-0.5 px-5 py-4">
+              <h2 class="text-muted-foreground text-center">
+                {projectImages[0].description}
+              </h2>
+            </div>
+          </article>
         </section>
-        <section id="" class="anchor flex flex-col gap-y-5 py-5">
-          <h2 class="font-bold text-xl">Logros y aprendizajes</h2>
-          <h3>Logros</h3>
-          <ul>
-            <li>
+        <section
+          class="w-full flex flex-row max-sm:flex-col-reverse gap-y-5 p-5 gap-x-2"
+        >
+          <aside class="w-6/12 max-sm:w-full flex flex-col">
+            <Image
+              src={projectImages[1].image}
+              alt={projectImages[1].name}
+              class="rounded-2xl object-cover self-center w-3/6"
+            />
+            <div class="flex flex-col gap-y-0.5 px-5 py-4">
+              <h2 class="text-muted-foreground text-center">
+                {projectImages[1].description}
+              </h2>
+            </div>
+          </aside>
+          <article class="w-6/12 max-sm:w-4/5 flex flex-col gap-y-5 m-5">
+            <h2 class="font-bold text-xl">Logros</h2>
+
+            <span class="text-justify">
               <b>Desarrollo Completo de la Aplicación</b>: Creación de una
               aplicación funcional con cuatro pantallas que permite a los
               usuarios conocer la frescura de los huevos de manera fácil.
-            </li>
-            <li>
+            </span>
+            <span class="text-justify">
               <b>Integración Efectiva con Servicios Web</b>: Consumo exitoso de
               servicios web REST para obtener y mostrar información relevante.
-            </li>
-            <li>
+            </span>
+            <span class="text-justify">
               <b>Interfaz de Usuario Intuitiva</b>: Diseño y desarrollo de una
               interfaz de usuario atractiva y fácil de usar.
-            </li>
-            <li>
+            </span>
+
+            <span class="text-justify">
               <b>Experiencia en Flutter</b>: Profundización en el uso de Flutter
               y Dart, lo que permitió un desarrollo rápido y eficiente.
-            </li>
-            <li>
+            </span>
+
+            <span class="text-justify">
               <b>Gestión de Proyecto Independiente</b>: Realización del proyecto
               completo como desarrollador único, demostrando habilidades de
               gestión del tiempo y autoaprendizaje.
-            </li>
-          </ul>
-          <h3>Aprendizajes</h3>
-          <ul>
-            <li>
+            </span>
+          </article>
+        </section>
+        <section
+          class="w-full flex flex-row max-sm:flex-col gap-y-5 p-5 gap-x-2"
+        >
+          <aside class="w-6/12 max-sm:w-4/5 flex flex-col gap-y-5 m-5">
+            <h2 class="font-bold text-xl">Aprendizajes</h2>
+            <span class="text-justify">
               <b>Dominio de Flutter y Dart</b>: Aprendizaje profundo de Flutter
               como framework de desarrollo móvil y Dart como lenguaje de
               programación.
-            </li>
-            <li>
+            </span>
+            <span class="text-justify">
               <b>Integración de API REST</b>: Habilidades mejoradas en la
               integración y consumo de APIs RESTful.
-            </li>
-            <li>
+            </span>
+
+            <span class="text-justify">
               <b>Diseño de UI/UX</b>: Experiencia en diseño de interfaces de
               usuario que son tanto atractivas como funcionales.
-            </li>
-            <li>
+            </span>
+
+            <span class="text-justify">
               <b>Manejo de Errores</b>: Desarrollo de técnicas para manejar
               errores y excepciones de manera efectiva, mejorando la robustez de
               la aplicación.
-            </li>
-            <li>
+            </span>
+
+            <span class="text-justify">
               <b>Gestión del Ciclo de Vida del Proyecto</b>: Aprendizaje de la
               gestión completa del ciclo de vida del desarrollo de una
               aplicación.
-            </li>
-            <li></li>
-          </ul>
+            </span>
+            <p class="my-3 p-5">
+              <button
+                id="button"
+                class="bg-accent-400 text-white font-bold rounded-2xl px-3 py-1"
+                >Prueba la App</button
+              >
+            </p>
+          </aside>
+          <article class="w-6/12 max-sm:w-full flex flex-col">
+            <Image
+              src={projectImages[2].image}
+              alt={projectImages[2].name}
+              class="rounded-2xl object-cover self-center w-3/6"
+            />
+            <div class="flex flex-col gap-y-0.5 px-5 py-4">
+              <h2 class="text-muted-foreground text-center">
+                {projectImages[2].description}
+              </h2>
+            </div>
+          </article>
         </section>
-        <p class="text-justify">
-          Al presentar tu proyecto en tu portafolio, el objetivo es destacar tus
-          habilidades y logros de manera efectiva, brindando a los espectadores
-          una comprensión clara y completa del proyecto y tu contribución al
-          mismo.
-        </p>
       </div>
     </div>
   </div>
 </Layout>
 
-<style></style>
+<style>
+  button:hover {
+    cursor: pointer;
+  }
+</style>
+
+<script>
+  function handleClick(event: any) {
+    console.log("¡botón pulsado!");
+    event.preventDefault();
+    var link = document.createElement("a");
+    link.href = "/public/HuevosFrescos.apk";
+    link.download = "tryme.apk";
+    document.body.appendChild(link);
+    link.click();
+  }
+  document.getElementById("button")?.addEventListener("click", handleClick);
+</script>

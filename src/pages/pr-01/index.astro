@@ -11,32 +11,26 @@ changeLanguage("en");
 
 const i18 = i18next.getDataByLanguage(i18next.language) as any;
 const skillNames = [
-  { name: "REST", icon: "restIcon" },
-  { name: "Dart", icon: "dartIcon" },
-  { name: "Flutter", icon: "flutterIcon" },
+    { name: "REST", icon: "restIcon" },
+    { name: "Dart", icon: "dartIcon" },
+    { name: "Flutter", icon: "flutterIcon" },
 ];
 const projectImages = [
-  {
-    name: "main screen",
-    image: mainImage,
-    description: i18["translation"]["pr_01"]["images_description"][
-      "main"
-    ] as string,
-  },
-  {
-    name: "product screen",
-    image: productImage,
-    description: i18["translation"]["pr_01"]["images_description"][
-      "product"
-    ] as string,
-  },
-  {
-    name: "response screen",
-    image: responseImage,
-    description: i18["translation"]["pr_01"]["images_description"][
-      "product"
-    ] as string,
-  },
+    {
+        name: "main screen",
+        image: mainImage,
+        description: i18["translation"]["pr_01"]["images_description"]["main"] as string,
+    },
+    {
+        name: "product screen",
+        image: productImage,
+        description: i18["translation"]["pr_01"]["images_description"]["product"] as string,
+    },
+    {
+        name: "response screen",
+        image: responseImage,
+        description: i18["translation"]["pr_01"]["images_description"]["product"] as string,
+    },
 ];
 ---
 
