@@ -3,8 +3,9 @@ import { ui, defaultLang, showDefaultLang } from "./ui";
 export function getLangFromUrl(url: URL) {
   const isProd = import.meta.env.PROD;
   const [, lang] = url.pathname.split(isProd ? "/" : "/erich/");
-  // console.log("Extracted lang from URL:", lang, isProd);
-  if (lang in ui) return lang as keyof typeof ui;
+  // console.log("Extracted lang from URL:", lang?.substring(0, 2), isProd);
+  if (lang?.substring(0, 2) in ui)
+    return lang?.substring(0, 2) as keyof typeof ui;
   return defaultLang;
 }
 
