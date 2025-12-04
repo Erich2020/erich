@@ -2,18 +2,21 @@
 import { ViewTransitions } from "astro:transitions";
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
-import i18next, { t } from "i18next";
-import { Trans, HeadHrefLangs } from "astro-i18next/components";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const siteLabels = t("site") as any;
 ---
 
-<html lang={i18next.language}>
+<html>
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content={t("site.description")} />
+    <meta name="description" content={siteLabels.description} />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>{t("site.title")}</title>
+    <title>{siteLabels.title}</title>
     <ViewTransitions />
   </head>
   <body
