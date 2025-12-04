@@ -5,11 +5,12 @@ import Tecnology from "../../components/Tecnology.astro";
 import mainImage from "../../assets/projects/huevos-frescos/main.png";
 import productImage from "../../assets/projects/huevos-frescos/product.png";
 import responseImage from "../../assets/projects/huevos-frescos/response.png";
-import i18next, { t, changeLanguage } from "i18next";
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
 
-changeLanguage("en");
 
-const i18 = i18next.getDataByLanguage(i18next.language) as any;
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const pr_01Labels = (t("pr_01") as any);
 const skillNames = [
     { name: "REST", icon: "restIcon" },
     { name: "Dart", icon: "dartIcon" },
@@ -19,17 +20,17 @@ const projectImages = [
     {
         name: "main screen",
         image: mainImage,
-        description: i18["translation"]["pr_01"]["images_description"]["main"] as string,
+        description: pr_01Labels["images_description"]["main"] as string,
     },
     {
         name: "product screen",
         image: productImage,
-        description: i18["translation"]["pr_01"]["images_description"]["product"] as string,
+        description: pr_01Labels["images_description"]["product"] as string,
     },
     {
         name: "response screen",
         image: responseImage,
-        description: i18["translation"]["pr_01"]["images_description"]["product"] as string,
+        description: pr_01Labels["images_description"]["product"] as string,
     },
 ];
 ---

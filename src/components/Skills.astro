@@ -1,10 +1,12 @@
 ---
 import { Image } from "astro:assets";
-import i18next, { t } from "i18next";
 import Tecnology from "./Tecnology.astro";
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
 
-const i18n = i18next.getDataByLanguage(i18next.language) as any;
-const i18 = i18n["translation"]["home"]["skills"];
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const homeLabels = (t("home") as any);
+const i18 = homeLabels["skills"];
 const skills = [
   // {
   //   category: i18.category1,
@@ -97,7 +99,7 @@ const skills = [
   >
     <use xlink:href="#ai:local:round"></use>
   </svg><h1 class="pl-2 font-bold" aria-label="Skills">
-    {t("home.skills.title")}
+    {homeLabels.skills.title}
   </h1>
 </div>
 <div class="flex flex-col gap-y-3">

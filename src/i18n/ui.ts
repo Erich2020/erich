@@ -1,0 +1,332 @@
+export const languages = {
+  en: 'English',
+  es: 'Español',
+};
+
+export const defaultLang = 'en';
+export const showDefaultLang = false;
+
+export const ui = {
+  en: {
+    "site": {
+        "title": "Erich Lz",
+        "description": "software developer, profile"
+    },
+    "home": {
+        "title": "home",
+        "about": {
+            "title": "About me",
+            "paragraph": "I am a Software Development Engineer with over 2 years of industry experience. Passionate about finding creative and efficient solutions to challenges encountered in software development. Committed to technical excellence and continuous improvement, I am constantly seeking opportunities to learn and grow professionally in this dynamic field of technology."
+        },
+        "experience": {
+            "title": "Experience",
+            "content": [
+                {
+                    "companyName": "Global Primex",
+                    "position": "Junior Full Stack Developer",
+                    "period": "24-02-2022 - Present",
+                    "activities": [
+                        "Lead and guide the development team to ensure a software product aligned with business needs.",
+                        "Maintain technical communication with external areas for integration of third-party software.",
+                        "Define frameworks to streamline deliveries in development and meet deadlines.",
+                        "Actively involve participation between management, business, operations, and development for continuous improvement.",
+                        "Plan and align workloads to the team according to their skills for each Sprint.",
+                        "Actively participate in product software development processes.",
+                        "I contributed to the project's success through effective project execution, resulting in the could be successfully replicated in other locations."
+                    ]
+                },
+                {
+                    "companyName": "Local Business Project",
+                    "position": "Full Stack Developer",
+                    "period": "May 2021 to January 2022",
+                    "activities": [
+                        "Development of REST API with DotNet Framework 5",
+                        "Front End development with Angular Js 10+",
+                        "Requirement gathering.",
+                        "Integration with third-party software.",
+                        "Handling MySql, MongoDb databases.",
+                        "Problem-solving",
+                        "Management of Linux/docker server"
+                    ]
+                }
+            ]
+        },
+        "education": {
+            "title": "Education",
+            "content": [
+                {
+                    "companyName": "Universidad Abierta y a Distancia de México",
+                    "position": "Software Development Engineer",
+                    "period": "",
+                    "activities": []
+                }
+            ]
+        },
+        "projects": {
+            "title": "Projects",
+            "contents": [
+                {
+                    "link": "pr-01",
+                    "name": "Fresh Eggs",
+                    "resume": "Android application that allows you to check the laying date of an egg.",
+                    "image": "pr-01",
+                    "icons": [
+                        "flutter",
+                        "dart"
+                    ]
+                }
+            ]
+        },
+        "skills": {
+            "title": "Skills",
+            "category1": "Infrastructure & Cloud Providers",
+            "category2": "Virtualization & Containers",
+            "category3": "Control de Versiones",
+            "category4": "App Servers",
+            "category5": "Frameworks",
+            "category6": "Database Servers",
+            "category7": "Languages",
+            "category8": "Operating Systems"
+        },
+        "tools": {
+            "title": "Tools",
+            "category1": "Development",
+            "category2": "Design",
+            "category3": "Productivity",
+            "type1": "Database Manager",
+            "type2": "Code Editor",
+            "type3": "Server Manager",
+            "type4": "Package Manager",
+            "type5": "API Platform",
+            "type6": "Design Tool",
+            "type7": "Project Manager",
+            "type8": "Communication and Collaboration Platform"
+        },
+        "profile": {
+            "position": "Full Stack Developer",
+            "locationLabel": "Location",
+            "location": "Remote, Mexico",
+            "btnConcat": "Contact Me!",
+            "objective": "Developing software solutions that enhance and simplify people's activities."
+        }
+    },
+    "pr_01": {
+        "images_description": {
+            "main": "Pantalla principal de la app",
+            "product": "Pantalla de la marca a consultar de la app",
+            "response": "Pantalla con la respuesta de la consulta de la app"
+        }
+    }
+},
+  es: {
+    "site": {
+        "title": "Erich Lz",
+        "description": "Desarrollador de software, portafolio"
+    },
+    "home": {
+        "title": "Inicio",
+        "about": {
+            "title": "Acerca de mí",
+            "paragraph": "Soy un Ingeniero de Desarrollo de Software con más de 2 años de experiencia en la industria. Apasionado encontrar soluciones creativas y eficientes para los desafíos que se presentan en el desarrollo de software. Con un firme compromiso con la excelencia técnica y la mejora continua, estoy constantemente buscando oportunidades para aprender y crecer profesionalmente en este dinámico campo de la tecnología."
+        },
+        "experience": {
+            "title": "Experiencia",
+            "content": [
+                {
+                    "companyName": "Global Primex",
+                    "position": "Desarrollador Full Stack Jr",
+                    "period": "24-02-2022 - Actual",
+                    "activities": [
+                        "Dirigir y orientar el equipo de desarrollo, para garantizar un producto software alineado a las necesidades del negocio.",
+                        "Mantener comunicación técnica con áreas externas para integración de software de terceros.",
+                        "Definir marcos de trabajo para agilizar las entregas en el desarrollo y cumplimiento de las dead lines.",
+                        "Incluir activamente la participación entre la linea directiva, negocio, operaciones y desarrollo para la mejora continúa.",
+                        "Planificar y alinear las cargas de trabajo al equipo de trabajo acorde a sus habilidades, para cada Sprint.",
+                        "Participar activamente en los procesos de desarrollo del producto software.",
+                        "Contribuí al éxito del proyecto mediante la ejecución efectiva de proyectos, lo que resultó en replicar con éxito en otras localidades."
+                    ]
+                },
+                {
+                    "companyName": "Proyecto Negocio Local",
+                    "position": "Desarrollador Full Stack",
+                    "period": "mayo 2021 a enero 2022",
+                    "activities": [
+                        "Desarrollo de API REST con DotNet Framework 5",
+                        "Desarrollo Front End con Angular Js 10+",
+                        "Levantamiento de requerimientos.",
+                        "Integración con software de terceros.",
+                        "Manejo de bases de datos MySql, MongoDb.",
+                        "Resolución de problemas",
+                        "Gestión de servidor Linux/docker"
+                    ]
+                },
+                {
+                    "companyName": "Proyecto Negocio Local",
+                    "position": "Desarrollador Full Stack",
+                    "period": "mayo 2021 a enero 2022",
+                    "activities": [
+                        "Desarrollo de API REST con DotNet Framework 5",
+                        "Desarrollo Front End con Angular Js 10+",
+                        "Levantamiento de requerimientos.",
+                        "Integración con software de terceros.",
+                        "Manejo de bases de datos MySql, MongoDb.",
+                        "Resolución de problemas",
+                        "Gestión de servidor Linux/docker"
+                    ]
+                }
+            ]
+        },
+        "education": {
+            "title": "Educación",
+            "content": [
+                {
+                    "companyName": "Universidad Abierta y a Distancia de México",
+                    "position": "Ing. en Desarrollo de Software",
+                    "period": "",
+                    "activities": []
+                }
+            ]
+        },
+        "projects": {
+            "title": "Proyectos",
+            "contents": [
+                {
+                    "link": "pr-01",
+                    "name": "Huevos Frescos",
+                    "resume": "Aplicación para Android que te permite consultar la fecha de puesta de un huevo.",
+                    "image": "pr-01",
+                    "tecnologies": [
+                        {
+                            "name": "flutter",
+                            "icon": "flutterIcon"
+                        },
+                        {
+                            "name": "Dart",
+                            "icon": "dartIcon"
+                        }
+                    ]
+                },
+                {
+                    "link": "pr-02",
+                    "name": "MiscAbar - Desktop",
+                    "resume": "Apicacion para escritorio de gestión y venta de productos.",
+                    "image": "pr-01",
+                    "tecnologies": [
+                        {
+                            "name": "DotNet 5",
+                            "icon": "dotnetIcon"
+                        },
+                        {
+                            "name": "Firebird",
+                            "icon": "firebirdIcon"
+                        }
+                    ]
+                },
+                {
+                    "link": "pr-02",
+                    "name": "MiscAbar - Web",
+                    "resume": "Apicacion para web para la gestión y venta de productos.",
+                    "image": "pr-01",
+                    "tecnologies": [
+                        {
+                            "name": "Angular",
+                            "icon": "angularIcon"
+                        },
+                        {
+                            "name": "DotNet 5",
+                            "icon": "dotnetIcon"
+                        },
+                        {
+                            "name": "MySql",
+                            "icon": "mysqlIcon"
+                        }
+                    ]
+                },
+                {
+                    "link": "pr-03",
+                    "name": "Generico",
+                    "resume": "Apicacion básica de gestión y ventas.",
+                    "image": "pr-01",
+                    "tecnologies": [
+                        {
+                            "name": "Angular",
+                            "icon": "angularIcon"
+                        },
+                        {
+                            "name": "DotNet 5",
+                            "icon": "dotnetIcon"
+                        },
+                        {
+                            "name": "MySql",
+                            "icon": "mysqlIcon"
+                        }
+                    ]
+                },
+                {
+                    "link": "pr-04",
+                    "name": "Plataforma Simuladores",
+                    "resume": "WPA orientada al giro de seguros, para simular cotizaciones de productos.",
+                    "image": "pr-01",
+                    "tecnologies": [
+                        {
+                            "name": "Angular",
+                            "icon": "angularIcon"
+                        },
+                        {
+                            "name": "Apollo",
+                            "icon": "apolloIcon"
+                        },
+                        {
+                            "name": "Graphql",
+                            "icon": "graphqlIcon"
+                        },
+                        {
+                            "name": "REST",
+                            "icon": "restIcon"
+                        }
+                    ]
+                }
+            ]
+        },
+        "skills": {
+            "title": "Habilidades",
+            "category1": "Infraestructura y Proveedores de Nube",
+            "category2": "Virtualización y Contenedores",
+            "category3": "Control de Versiones",
+            "category4": "Servidores de Aplicaciones",
+            "category5": "Frameworks",
+            "category6": "Servidores de Bases de Datos",
+            "category7": "Lenguajes de Programación",
+            "category8": "Sistemas Operativos"
+        },
+        "tools": {
+            "title": "Herramientas",
+            "category1": "Desarrollo",
+            "category2": "Diseño",
+            "category3": "Productividad",
+            "type1": "Gestor BD",
+            "type2": "Editor de Código",
+            "type3": "Gestor de Servidor",
+            "type4": "Gestor de Paquetes",
+            "type5": "Plataforma API",
+            "type6": "Herramienta de Diseño",
+            "type7": "Gestor de Projectos",
+            "type8": "Plataforma de comunicación y colaboración"
+        },
+        "profile": {
+            "position": "Desarrollador Full Stack",
+            "locationLabel": "Ubicación",
+            "location": "Remoto, Mexico",
+            "btnConcat": "¡Contáctame!",
+            "objective": "Desarrollar soluciones de software que mejoren y simplifiquen las actividades de las personas."
+        }
+    },
+    "pr_01": {
+        "images_description": {
+            "main": "Pantalla principal de la app",
+            "product": "Pantalla de la marca a consultar de la app",
+            "response": "Pantalla con la respuesta de la consulta de la app"
+        }
+    }
+},
+} as const;

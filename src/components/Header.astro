@@ -1,8 +1,10 @@
 ---
-import i18next, { t } from "i18next";
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
 
-const i18 = i18next.getDataByLanguage(i18next.language) as any;
-const homeLabels = i18["translation"]["home"];
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const homeLabels = t("home") as any;
 const optionsMenu = [
   {
     href: "#about",

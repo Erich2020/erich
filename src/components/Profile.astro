@@ -1,8 +1,13 @@
 ---
-import i18next, { t } from "i18next";
 import { Image } from "astro:assets";
-
 import profile from "../assets/person.png";
+
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const profileLabels = (t("home") as any).profile;
+
 ---
 
 <aside
@@ -25,10 +30,10 @@ import profile from "../assets/person.png";
           EricK Lopez
         </h1>
         <h2 class="text-3xl text-secondary-foreground text-center">
-          {t("home.profile.position")}
+          {profileLabels.position}
         </h2>
         <p class="text-md text-secondary-foreground text-center">
-          {t("home.profile.objective")}
+          {profileLabels.objective}
         </p>
         <div class="flex flex-row gap-x-4 pb-3 pt-1">
           <a href="https://github.com/Erich2020" target="_blank" aria-label="github"
@@ -113,9 +118,9 @@ import profile from "../assets/person.png";
               <span
                 class="text-xs uppercase text-accent-600 dark:text-accent-200"
               >
-                {t("home.profile.locationLabel")}
+                {profileLabels.locationLabel}
               </span>
-              <span class="font-bold">{t("home.profile.location")}</span>
+              <span class="font-bold">{profileLabels.location}</span>
             </div>
           </div>
           <div class="border-t border-border"></div>
@@ -127,7 +132,7 @@ import profile from "../assets/person.png";
       target="_blank"
       class="bg-accent-300 dark:bg-accent-900 hover:shadow-background-tertiary/40 flex flex-row items-center justify-center gap-x-3 rounded-3xl px-4 py-2 text-sm transition-all hover:shadow-md dark:shadow-black/50 hover:dark:shadow-white/30"
     >
-      <p class="text-lg font-bold">{t("home.profile.btnConcat")}</p>
+      <p class="text-lg font-bold">{profileLabels.btnConcat}</p>
     </a>
   </div>
 </aside>

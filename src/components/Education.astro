@@ -1,8 +1,11 @@
 ---
 import Job from "./Job.astro";
-import i18next, { t } from "i18next";
-const i18 = i18next.getDataByLanguage(i18next.language) as any;
-const education = i18["translation"]["home"]["education"]["content"] as {
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const home = t("home") as any;
+const education = home["education"]["content"] as {
   companyName: string;
   position: string;
   period: string;
@@ -22,7 +25,7 @@ const education = i18["translation"]["home"]["education"]["content"] as {
   >
     <use xlink:href="#ai:local:round"></use>
   </svg><h1 class="pl-2 font-bold" aria-label="Education">
-    {t("home.education.title")}
+    {home.education.title}
   </h1>
 </div>
 <div class="flex flex-col gap-y-3">

@@ -1,6 +1,5 @@
 ---
 import { Image } from "astro:assets";
-import i18next, { t } from "i18next";
 
 import vsIcon from "../assets/icons/vs.svg";
 import openIcon from "../assets/icons/openai.svg";
@@ -16,8 +15,12 @@ import drawIcon from "../assets/icons/draw.svg";
 import jiraIcon from "../assets/icons/jira.svg";
 import teamsIcon from "../assets/icons/teams.svg";
 
-const i18n = i18next.getDataByLanguage(i18next.language) as any;
-const i18 = i18n["translation"]["home"]["tools"];
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const homeLabels = (t("home") as any);
+const i18 = homeLabels["tools"];
 const allTools = [
   {
     category: i18.category1,
@@ -127,7 +130,7 @@ const allTools = [
   >
     <use xlink:href="#ai:local:round"></use>
   </svg><h1 class="pl-2 font-bold" aria-label="Tools">
-    {t("home.tools.title")}
+    {homeLabels.tools.title}
   </h1>
 </div>
 <div class="flex flex-col gap-y-3">

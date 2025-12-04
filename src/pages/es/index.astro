@@ -1,5 +1,5 @@
 ---
-import { changeLanguage } from "i18next";
+import { getLangFromUrl } from '../../i18n/utils';
 import Layout from "../../layouts/Layout.astro";
 import About from "../../components/About.astro";
 import Profile from "../../components/Profile.astro";
@@ -9,7 +9,7 @@ import Skills from "../../components/Skills.astro";
 import Tools from "../../components/Tools.astro";
 import Experience from "../../components/Experience.astro";
 
-changeLanguage("es");
+const lang = getLangFromUrl(Astro.url);
 ---
 
 <Layout>

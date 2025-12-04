@@ -1,10 +1,13 @@
 ---
 import { Image } from "astro:assets";
-import i18next, { t } from "i18next";
 import portraitImg from "../assets/projects/huevos-frescos/sc.png";
 import Tecnology from "./Tecnology.astro";
 
-const i18 = i18next.getDataByLanguage(i18next.language) as any;
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const homeLabels = (t("home") as any);
 
 const projectImages: any = {
   "pr-01": portraitImg,
@@ -15,7 +18,7 @@ const IconSkills: any = {
   dart: "",
 };
 
-const projects = i18["translation"]["home"]["projects"]["contents"] as {
+const projects = homeLabels["projects"]["contents"] as {
   link: string;
   name: string;
   resume: string;
