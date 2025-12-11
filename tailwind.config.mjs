@@ -8,7 +8,7 @@ export default {
       black: "#000",
       white: "#fff",
       accent: {
-        50: "#eee7f5",
+        50: "#f1e8ff",
         100: "#d3c4e8",
         200: "#b69dd9",
         300: "#9975ca",
