@@ -1,20 +1,20 @@
 ---
 import { Image } from "astro:assets";
 import Tecnology from "./Tecnology.astro";
-import { getLangFromUrl, useTranslations } from '../i18n/utils';
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
-const homeLabels = (t("home") as any);
+const homeLabels = t("home") as any;
 const i18 = homeLabels["skills"];
 const skills = [
-  // {
-  //   category: i18.category1,
-  //   skillNames: [
-  //     { name: "Cloudformation", icon: "cloudformationIcon" },
-  //     { name: "AWS", icon: "awsIcon" },
-  //   ],
-  // },
+  {
+    category: i18.category1,
+    skillNames: [
+      { name: "Cloudformation", icon: "cloudformationIcon" },
+      { name: "AWS", icon: "awsIcon" },
+    ],
+  },
   {
     category: i18.category2,
     skillNames: [
@@ -71,7 +71,7 @@ const skills = [
       { name: "CSharp", icon: "csharpIcon" },
       { name: "Javascript", icon: "javascriptIcon" },
       { name: "PHP", icon: "phpIcon" },
-      //   { name: "Python", icon: pythonIcon },
+      { name: "Python", icon: "pythonIcon" },
       { name: "Yaml", icon: "yamlIcon" },
       { name: "SQL", icon: "sqlIcon" },
       { name: "Dart", icon: "dartIcon" },

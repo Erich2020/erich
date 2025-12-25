@@ -18,6 +18,10 @@ const siteLabels = t("site") as any;
     <meta name="generator" content={Astro.generator} />
     <title>{siteLabels.title}</title>
     <ViewTransitions />
+    <script>
+      import Alpine from 'alpinejs';
+      Alpine.start()
+    </script>
   </head>
   <body
     class="flex h-full justify-center bg-background bg-accent-50 dark:bg-accent-400 bg-cover bg-fixed"

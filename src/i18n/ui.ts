@@ -207,9 +207,9 @@ export const ui = {
                     ]
                 },
                 {
-                    "link": "pr-02",
+                    "link": "es/pr-02",
                     "name": "MiscAbar - Desktop",
-                    "resume": "Apicacion para escritorio de gestión y venta de productos.",
+                    "resume": "Aplicación para escritorio de gestión y venta de productos.",
                     "image": "pr-01",
                     "tecnologies": [
                         {
@@ -223,7 +223,7 @@ export const ui = {
                     ]
                 },
                 {
-                    "link": "pr-02",
+                    "link": "pr-03",
                     "name": "MiscAbar - Web",
                     "resume": "Apicacion para web para la gestión y venta de productos.",
                     "image": "pr-01",
@@ -243,7 +243,7 @@ export const ui = {
                     ]
                 },
                 {
-                    "link": "pr-03",
+                    "link": "pr-04",
                     "name": "Generico",
                     "resume": "Apicacion básica de gestión y ventas.",
                     "image": "pr-01",
@@ -263,7 +263,7 @@ export const ui = {
                     ]
                 },
                 {
-                    "link": "pr-04",
+                    "link": "pr-05",
                     "name": "Plataforma Simuladores",
                     "resume": "WPA orientada al giro de seguros, para simular cotizaciones de productos.",
                     "image": "pr-01",
@@ -318,7 +318,7 @@ export const ui = {
             "locationLabel": "Ubicación",
             "location": "Remoto, Mexico",
             "btnConcat": "¡Contáctame!",
-            "objective": "Desarrollar soluciones de software que mejoren y simplifiquen las actividades de las personas."
+            "objective": "Crear soluciones de software que mejoren y simplifiquen las actividades de las personas."
         }
     },
     "pr_01": {
