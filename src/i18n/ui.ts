@@ -116,7 +116,15 @@ export const ui = {
             "product": "Pantalla de la marca a consultar de la app",
             "response": "Pantalla con la respuesta de la consulta de la app"
         }
+    },
+    "pr_02": {
+        "images_description": {
+            "main": "Pantalla principal de la app",
+            "product": "Pantalla de muesta",
+            "response": "Pantalla de muesta"
+        }
     }
+
 },
   es: {
     "site": {
@@ -326,6 +334,13 @@ export const ui = {
             "main": "Pantalla principal de la app",
             "product": "Pantalla de la marca a consultar de la app",
             "response": "Pantalla con la respuesta de la consulta de la app"
+        }
+    },    
+    "pr_02": {
+        "images_description": {
+            "main": "Pantalla principal de la app",
+            "product": "Pantalla de muesta",
+            "response": "Pantalla de muesta"
         }
     }
 },

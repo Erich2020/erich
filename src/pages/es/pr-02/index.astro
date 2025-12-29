@@ -2,36 +2,54 @@
 import { Image } from "astro:assets";
 import Layout from "../../../layouts/Project.astro";
 import Tecnology from "../../../components/Tecnology.astro";
-import mainImage from "../../../assets/projects/huevos-frescos/main.png";
-import productImage from "../../../assets/projects/huevos-frescos/product.png";
-import responseImage from "../../../assets/projects/huevos-frescos/response.png";
-import { getLangFromUrl, useTranslations } from '../../../i18n/utils';
+import mainImage from "../../../assets/projects/miscabar-desktop/main.png";
+import productImage from "../../../assets/projects/miscabar-desktop/products.png";
+import responseImage from "../../../assets/projects/miscabar-desktop/users-permisions.png";
+import loginImage from "../../../assets/projects/miscabar-desktop/login.png";
+import reportInventImage from "../../../assets/projects/miscabar-desktop/report_invent.png";
+import corteImage from "../../../assets/projects/miscabar-desktop/corte.png";
 
+import { getLangFromUrl, useTranslations } from "../../../i18n/utils";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
-const pr_01Labels = (t("pr_01") as any);
+const pr_01Labels = t("pr_02") as any;
 const skillNames = [
-    { name: ".NET 5.0", icon: "dotnetIcon" },
-    { name: "Firebird", icon: "firebirdIcon" },
-    { name: "C#", icon: "csharpIcon" },
+  { name: ".NET 5.0", icon: "dotnetIcon" },
+  { name: "Firebird", icon: "firebirdIcon" },
+  { name: "C#", icon: "csharpIcon" },
 ];
 const projectImages = [
-    {
-        name: "main screen",
-        image: mainImage,
-        description: pr_01Labels["images_description"]["main"] as string,
-    },
-    {
-        name: "product screen",
-        image: productImage,
-        description: pr_01Labels["images_description"]["product"] as string,
-    },
-    {
-        name: "response screen",
-        image: responseImage,
-        description: pr_01Labels["images_description"]["product"] as string,
-    },
+  {
+    name: "main screen",
+    image: mainImage,
+    description: pr_01Labels["images_description"]["main"] as string,
+  },
+  {
+    name: "product screen",
+    image: productImage,
+    description: pr_01Labels["images_description"]["product"] as string,
+  },
+  {
+    name: "response screen",
+    image: responseImage,
+    description: pr_01Labels["images_description"]["product"] as string,
+  },
+  {
+    name: "response screen",
+    image: loginImage,
+    description: pr_01Labels["images_description"]["product"] as string,
+  },
+  {
+    name: "response screen",
+    image: reportInventImage,
+    description: pr_01Labels["images_description"]["product"] as string,
+  },
+  {
+    name: "response screen",
+    image: corteImage,
+    description: pr_01Labels["images_description"]["product"] as string,
+  },
 ];
 ---
 
@@ -41,9 +59,7 @@ const projectImages = [
       <div
         class="bg-white dark:bg-black text-black dark:text-white mt-5 rounded-2xl border border-transparent p-5 md:mt-[5.5rem] text-center"
       >
-        <h1 class="font-bold text-3xl my-3">
-          MiscAbar Desktop
-        </h1>
+        <h1 class="font-bold text-3xl my-3">MiscAbar Desktop</h1>
         <section
           class="w-full flex flex-row max-sm:flex-col gap-y-5 p-5 gap-x-2"
         >
@@ -52,7 +68,11 @@ const projectImages = [
               Descripción del Proyecto: MiscAbar Desktop
             </h2>
             <p class="text-justify">
-              Esta aplicación para escritorio permite gestionar y vender productos de manera eficiente. Desarrollada con tecnologías .NET 5.0 y conectada a una base de datos local Firebird, ofrece funcionalidades multiusuario para la administración de productos, inventarios, ventas y gestión de capitales.
+              Esta aplicación para escritorio permite gestionar y vender
+              productos de manera eficiente. Desarrollada con tecnologías .NET
+              5.0 y conectada a una base de datos local Firebird, ofrece
+              funcionalidades multiusuario para la administración de productos,
+              inventarios, ventas y gestión de capitales.
             </p>
             <h3 class="font-bold text-xl">Tecnologías</h3>
             <div class="flex w-full flex-row flex-wrap gap-x-4 justify-center">
@@ -64,22 +84,46 @@ const projectImages = [
             </div>
             <h2 class="font-bold text-xl">Características Principales</h2>
             <p class="text-justify">
-              Gestión de Productos: Permite agregar, editar y eliminar productos con detalles completos. Control de Inventarios: Monitorea el stock en tiempo real y genera alertas de bajo inventario. Sistema de Ventas: Registra ventas, calcula totales y genera facturas automáticamente. Gestión de Capitales: Administra los capitales invertidos en productos y ventas para un control financiero preciso. Multiusuario: Soporta múltiples usuarios con roles y permisos diferenciados. Base de Datos Local Firebird: Almacena datos de forma segura y eficiente en una base de datos local.
+              Gestión de Productos: Permite agregar, editar y eliminar productos
+              con detalles completos. Control de Inventarios: Monitorea el stock
+              en tiempo real y genera alertas de bajo inventario. Sistema de
+              Ventas: Registra ventas, calcula totales y genera facturas
+              automáticamente. Gestión de Capitales: Administra los capitales
+              invertidos en productos y ventas para un control financiero
+              preciso. Multiusuario: Soporta múltiples usuarios con roles y
+              permisos diferenciados. Base de Datos Local Firebird: Almacena
+              datos de forma segura y eficiente en una base de datos local.
             </p>
             <h2 class="font-bold text-xl">Beneficios para el Usuario</h2>
             <p class="text-justify">
-              Eficiencia Operativa: Automatiza procesos de inventario y ventas, reduciendo errores manuales. Control Financiero: Proporciona insights precisos sobre capitales y ganancias. Seguridad de Datos: Utiliza Firebird para un almacenamiento seguro y local. Escalabilidad: Diseñada para crecer con el negocio, soportando múltiples usuarios. Facilidad de Uso: Interfaz intuitiva desarrollada con .NET para una experiencia de usuario óptima.
+              Eficiencia Operativa: Automatiza procesos de inventario y ventas,
+              reduciendo errores manuales. Control Financiero: Proporciona
+              insights precisos sobre capitales y ganancias. Seguridad de Datos:
+              Utiliza Firebird para un almacenamiento seguro y local.
+              Escalabilidad: Diseñada para crecer con el negocio, soportando
+              múltiples usuarios. Facilidad de Uso: Interfaz intuitiva
+              desarrollada con .NET para una experiencia de usuario óptima.
             </p>
           </aside>
-          <article class="w-6/12 max-sm:w-full flex flex-col">
+          <article class="w-6/12 max-sm:w-full flex flex-col justify-center">
             <Image
               src={projectImages[0].image}
               alt={projectImages[0].name}
-              class="rounded-2xl object-cover self-center w-3/5"
+              class="rounded-2xl object-cover self-center w-3/5 project-image"
             />
             <div class="flex flex-col gap-y-0.5 px-5 py-4">
               <h2 class="text-muted-foreground text-center">
                 {projectImages[0].description}
+              </h2>
+            </div>
+            <Image
+              src={projectImages[3].image}
+              alt={projectImages[3].name}
+              class="rounded-2xl object-cover self-center w-3/6 project-image"
+            />
+            <div class="flex flex-col gap-y-0.5 px-5 py-4">
+              <h2 class="text-muted-foreground text-center">
+                {projectImages[3].description}
               </h2>
             </div>
           </article>
@@ -87,15 +131,25 @@ const projectImages = [
         <section
           class="w-full flex flex-row max-sm:flex-col-reverse gap-y-5 p-5 gap-x-2"
         >
-          <aside class="w-6/12 max-sm:w-full flex flex-col">
+          <aside class="w-6/12 max-sm:w-full flex flex-col justify-center">
             <Image
               src={projectImages[1].image}
               alt={projectImages[1].name}
-              class="rounded-2xl object-cover self-center w-3/6"
+              class="rounded-2xl object-cover self-center w-3/6 project-image"
             />
             <div class="flex flex-col gap-y-0.5 px-5 py-4">
               <h2 class="text-muted-foreground text-center">
                 {projectImages[1].description}
+              </h2>
+            </div>
+            <Image
+              src={projectImages[5].image}
+              alt={projectImages[5].name}
+              class="rounded-2xl object-cover self-center w-3/6 project-image"
+            />
+            <div class="flex flex-col gap-y-0.5 px-5 py-4">
+              <h2 class="text-muted-foreground text-center">
+                {projectImages[5].description}
               </h2>
             </div>
           </aside>
@@ -103,21 +157,29 @@ const projectImages = [
             <h2 class="font-bold text-xl">Logros</h2>
 
             <span class="text-justify">
-              <b>Desarrollo Completo de la Aplicación</b>: Creación de una aplicación de escritorio funcional con módulos para gestión de productos, inventarios, ventas y finanzas.
+              <b>Desarrollo Completo de la Aplicación</b>: Creación de una
+              aplicación de escritorio funcional con módulos para gestión de
+              productos, inventarios, ventas y finanzas.
             </span>
             <span class="text-justify">
-              <b>Integración con Firebird Embebido</b>: Implementación exitosa de una base de datos local Firebird para almacenamiento seguro y eficiente.
+              <b>Integración con Firebird Embebido</b>: Implementación exitosa
+              de una base de datos local Firebird para almacenamiento seguro y
+              eficiente.
             </span>
             <span class="text-justify">
-              <b>Sistema Multiusuario</b>: Desarrollo de un sistema de autenticación y roles para múltiples usuarios.
+              <b>Sistema Multiusuario</b>: Desarrollo de un sistema de
+              autenticación y roles para múltiples usuarios.
             </span>
 
             <span class="text-justify">
-              <b>Experiencia en .NET 5.0</b>: Profundización en el uso de .NET 5.0 y C# para desarrollo de aplicaciones de escritorio.
+              <b>Experiencia en .NET 5.0</b>: Profundización en el uso de .NET
+              5.0 y C# para desarrollo de aplicaciones de escritorio.
             </span>
 
             <span class="text-justify">
-              <b>Gestión de Proyecto Completo</b>: Realización del proyecto como desarrollador único, demostrando habilidades en gestión y desarrollo full-stack.
+              <b>Gestión de Proyecto Completo</b>: Realización del proyecto como
+              desarrollador único, demostrando habilidades en gestión y
+              desarrollo full-stack.
             </span>
           </article>
         </section>
@@ -127,33 +189,49 @@ const projectImages = [
           <aside class="w-6/12 max-sm:w-4/5 flex flex-col gap-y-5 m-5">
             <h2 class="font-bold text-xl">Aprendizajes</h2>
             <span class="text-justify">
-              <b>Dominio de .NET 5.0 y C#</b>: Aprendizaje profundo de .NET 5.0 como framework y C# para desarrollo de aplicaciones de escritorio.
+              <b>Dominio de .NET 5.0 y C#</b>: Aprendizaje profundo de .NET 5.0
+              como framework y C# para desarrollo de aplicaciones de escritorio.
             </span>
             <span class="text-justify">
-              <b>Integración de Firebird</b>: Habilidades mejoradas en la configuración y uso de Firebird como base de datos local.
-            </span>
-
-            <span class="text-justify">
-              <b>Diseño de UI/UX para Escritorio</b>: Experiencia en diseño de interfaces de usuario para aplicaciones de escritorio.
+              <b>Integración de Firebird</b>: Habilidades mejoradas en la
+              configuración y uso de Firebird como base de datos local.
             </span>
 
             <span class="text-justify">
-              <b>Gestión de Usuarios y Seguridad</b>: Desarrollo de técnicas para autenticación multiusuario y control de acceso.
+              <b>Diseño de UI/UX para Escritorio</b>: Experiencia en diseño de
+              interfaces de usuario para aplicaciones de escritorio.
             </span>
 
             <span class="text-justify">
-              <b>Gestión de Inventarios y Finanzas</b>: Aprendizaje de lógica de negocio para gestión de productos, ventas y capitales.
+              <b>Gestión de Usuarios y Seguridad</b>: Desarrollo de técnicas
+              para autenticación multiusuario y control de acceso.
+            </span>
+
+            <span class="text-justify">
+              <b>Gestión de Inventarios y Finanzas</b>: Aprendizaje de lógica de
+              negocio para gestión de productos, ventas y capitales.
             </span>
           </aside>
-          <article class="w-6/12 max-sm:w-full flex flex-col">
+          <article class="w-6/12 max-sm:w-full flex flex-col justify-center">
             <Image
               src={projectImages[2].image}
               alt={projectImages[2].name}
-              class="rounded-2xl object-cover self-center w-3/6"
+              class="rounded-2xl object-cover self-center w-3/6 project-image"
             />
             <div class="flex flex-col gap-y-0.5 px-5 py-4">
               <h2 class="text-muted-foreground text-center">
                 {projectImages[2].description}
+              </h2>
+            </div>
+
+            <Image
+              src={projectImages[4].image}
+              alt={projectImages[4].name}
+              class="rounded-2xl object-cover self-center w-3/6 project-image"
+            />
+            <div class="flex flex-col gap-y-0.5 px-5 py-4">
+              <h2 class="text-muted-foreground text-center">
+                {projectImages[4].description}
               </h2>
             </div>
           </article>
@@ -161,6 +239,12 @@ const projectImages = [
       </div>
     </div>
   </div>
+<div id="image-modal" class="fixed inset-0 bg-black bg-opacity-75 hidden flex items-center justify-center z-50">
+  <div class="relative bg-white dark:bg-black p-4 rounded-lg max-w-4xl max-h-[80vh]">
+    <button id="close-modal" class="absolute top-2 right-2 text-black dark:text-white bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700 px-2 py-1 rounded">×</button>
+    <img id="modal-image" class="w-full h-full object-contain rounded" />
+  </div>
+</div>
 </Layout>
 
 <style>
@@ -168,3 +252,30 @@ const projectImages = [
     cursor: pointer;
   }
 </style>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById('image-modal') as HTMLDivElement;
+    const modalImage = document.getElementById('modal-image') as HTMLImageElement;
+    const closeModal = document.getElementById('close-modal') as HTMLButtonElement;
+    document.querySelectorAll('.project-image').forEach((img) => {
+      const imageElement = img as HTMLImageElement;
+      imageElement.addEventListener('click', () => {
+        modalImage.src = imageElement.src;
+        modal.classList.remove('hidden');
+      });
+    });
+    closeModal.addEventListener('click', () => {
+      modal.classList.add('hidden');
+    });
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.classList.add('hidden');
+      }
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        modal.classList.add('hidden');
+      }
+    });
+  });
+</script>
