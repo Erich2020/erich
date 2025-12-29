@@ -232,7 +232,7 @@ export const ui = {
                     ]
                 },
                 {
-                    "link": "es/pr-02",
+                    "link": "pr-02",
                     "name": "MiscAbar - Desktop",
                     "resume": "Aplicación para escritorio de gestión y venta de productos.",
                     "image": "pr-02",
