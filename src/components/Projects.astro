@@ -1,16 +1,19 @@
 ---
 import { Image } from "astro:assets";
 import portraitImg from "../assets/projects/huevos-frescos/sc.png";
+import coverMiscabarDeskImg from "../assets/projects/miscabar-desktop/cover.png";
+
 import Tecnology from "./Tecnology.astro";
 
-import { getLangFromUrl, useTranslations } from '../i18n/utils';
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
-const homeLabels = (t("home") as any);
+const homeLabels = t("home") as any;
 
 const projectImages: any = {
   "pr-01": portraitImg,
+  "pr-02": coverMiscabarDeskImg,
 };
 
 const IconSkills: any = {

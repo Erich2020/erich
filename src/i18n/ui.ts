@@ -74,7 +74,24 @@ export const ui = {
                         "flutter",
                         "dart"
                     ]
-                }
+                },                
+                {
+                    "link": "pr-02",
+                    "name": "MiscAbar - Desktop",
+                    "resume": "Aplicación para escritorio de gestión y venta de productos.",
+                    "image": "pr-02",
+                    "tecnologies": [
+                        {
+                            "name": "DotNet 5",
+                            "icon": "dotnetIcon"
+                        },
+                        {
+                            "name": "Firebird",
+                            "icon": "firebirdIcon"
+                        }
+                    ]
+                },
+
             ]
         },
         "skills": {
@@ -218,7 +235,7 @@ export const ui = {
                     "link": "es/pr-02",
                     "name": "MiscAbar - Desktop",
                     "resume": "Aplicación para escritorio de gestión y venta de productos.",
-                    "image": "pr-01",
+                    "image": "pr-02",
                     "tecnologies": [
                         {
                             "name": "DotNet 5",
